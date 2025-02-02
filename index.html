@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PocketVPS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        🚀 PocketVPS
+        <button id="dark-mode-toggle" class="dark-mode-toggle">🌙</button>
+    </header>
+
+    <div class="container">
+        <section class="step">
+            <h2>📌 Step 1: Install Required Packages</h2>
+            <pre id="code-1">
+apt update && apt upgrade -y
+            </pre>
+            <button class="copy-btn" data-clipboard-target="#code-1">Copy</button>
+            <pre id="code-2">
+pkg install openssh -y
+            </pre>
+            <button class="copy-btn" data-clipboard-target="#code-2">Copy</button>
+        </section>
+
+        <section class="step">
+            <h2>🔒 Step 2: Configure SSH Server</h2>
+            <pre id="code-3">
+sshd  # Start the SSH server
+            </pre>
+            <button class="copy-btn" data-clipboard-target="#code-3">Copy</button>
+            <pre id="code-4">
+passwd  # Set your SSH login password
+            </pre>
+            <button class="copy-btn" data-clipboard-target="#code-4">Copy</button>
+        </section>
+
+        <section class="step">
+            <h2>🌍 Step 3: Establish Remote Access</h2>
+            <pre id="code-5">
+ssh -R &lt;PORT&gt;:localhost:8022 serveo.net
+            </pre>
+            <button class="copy-btn" data-clipboard-target="#code-5">Copy</button>
+            <p>🔹 Replace <code>&lt;PORT&gt;</code> with a <strong>random 5-digit number</strong> (e.g., 54321).</p>
+        </section>
+
+        <section class="step">
+            <h2>💻 Step 4: Connect from Your Laptop/PC</h2>
+            <pre id="code-6">
+ssh root@serveo.net -p &lt;PORT&gt;
+            </pre>
+            <button class="copy-btn" data-clipboard-target="#code-6">Copy</button>
+            <p>🔹 Use the <strong>same port</strong> set in Step 3.</p>
+        </section>
+
+        <section>
+            <h2>🎭 Join the Community!</h2>
+            <p>💬 Need help? Have questions? Join my Discord server!</p>
+            <p><a class="discord-link" href="https://dsc.gg/itz0cat" target="_blank">Click Here to Join</a></p>
+        </section>
+    </div>
+
+    <footer>
+        🚀 PocketVPS – Bringing the Power of a VPS to Your Pocket!
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleButton.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
+        });
+
+        // Initialize ClipboardJS for Copy Buttons
+        new ClipboardJS('.copy-btn');
+    </script>
+</body>
+</html>
