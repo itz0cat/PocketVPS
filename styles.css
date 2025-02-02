@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e1f5fe; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #81d4fa; /* Cozy light blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    border-bottom: 5px solid #29b6f6;
+    position: relative;
+}
+
+header .dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0288d1; /* Cozy darker blue */
+}
+
+pre {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    color: #01579b;
+}
+
+.copy-btn {
+    background-color: #81d4fa;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.copy-btn:hover {
+    background-color: #29b6f6;
+}
+
+.step {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e1f5fe;
+    border-left: 5px solid #29b6f6;
+    border-radius: 8px;
+}
+
+.discord-link {
+    color: #01579b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.discord-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #0288d1;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #263238;
+    color: #eceff1;
+}
+
+body.dark-mode header {
+    background-color: #37474f;
+}
+
+body.dark-mode .container {
+    background-color: #455a64;
+}
+
+body.dark-mode pre {
+    background-color: #546e7a;
+    color: #eceff1;
+}
+
+body.dark-mode .copy-btn {
+    background-color: #455a64;
+    color: #eceff1;
+}
+
+body.dark-mode .copy-btn:hover {
+    background-color: #607d8b;
+}
